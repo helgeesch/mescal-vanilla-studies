@@ -54,6 +54,7 @@ git clone https://github.com/helgeesch/mescal-vanilla-studies.git
 ```
 
 ### Step 2: Add submodules
+
 ```bash
 cd mescal-vanilla-studies
 git submodule update --init

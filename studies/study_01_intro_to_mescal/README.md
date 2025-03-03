@@ -2,9 +2,9 @@
 The intro study primarily uses a PyPSA example network to introduce the MESCAL modules and framework. The series is structured as follows and will continuously be updated. So stay tuned.
 
 ### Getting Started Series:
-- [mescal_101_study_manager_and_basic_fetching](studies/study_01_intro_to_mescal/notebooks/mescal_101_study_manager_and_basic_fetching.ipynb) - Getting started with scenarios and comparisons
-- [mescal_102_mastering_data_fetching](studies/study_01_intro_to_mescal/notebooks/mescal_102_mastering_data_fetching.ipynb) - Mastering the fetch method and data access patterns
-- [mescal_103_time_series_dashboard](studies/study_01_intro_to_mescal/notebooks/mescal_103_time_series_dashboard.ipynb) - Building interactive visualizations beyond simple line plots
+- [mescal_101_study_manager_and_basic_fetching](notebooks/mescal_101_study_manager_and_basic_fetching.ipynb) - Getting started with scenarios and comparisons
+- [mescal_102_mastering_data_fetching](notebooks/mescal_102_mastering_data_fetching.ipynb) - Mastering the fetch method and data access patterns
+- [mescal_103_time_series_dashboard](notebooks/mescal_103_time_series_dashboard.ipynb) - Building interactive visualizations beyond simple line plots
 
 ### Intermediate Series:
 - mescal_201_custom_interpreters - Creating study-specific data interpreters and variables
