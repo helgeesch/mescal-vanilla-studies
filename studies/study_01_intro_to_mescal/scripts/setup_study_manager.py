@@ -20,7 +20,7 @@ def get_scigrid_de_study_manager() -> StudyManager:
     n_wind_150 = pypsa.Network(os.path.join(networks_folder, 'wind_150.nc'))
     n_wind_200 = pypsa.Network(os.path.join(networks_folder, 'wind_200.nc'))
 
-    study = StudyManager.factory_from_scenarios(
+    study_manager = StudyManager.factory_from_scenarios(
         scenarios=[
             PyPSADataset(n_base,        name='base'),
             PyPSADataset(n_solar_150,   name='solar_150'),
@@ -31,4 +31,8 @@ def get_scigrid_de_study_manager() -> StudyManager:
         comparisons=[('solar_150', 'base'), ('solar_200', 'base'), ('wind_150', 'base'), ('wind_200', 'base')],
         export_folder=os.path.join(study_folder, 'non_versioned/output'),
     )
-    return study
+    return study_manager
+
+
+if __name__ == '__main__':
+    study = get_scigrid_de_study_manager()
