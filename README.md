@@ -1,14 +1,14 @@
-# MESCAL vanilla studies
-
 [![Python >=3.10](https://img.shields.io/badge/python-≥3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
+# MESCAL vanilla studies
+
 ## Overview
 
-**MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison and KPI calculation. This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies.
+**MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations. This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies.
 
 **Value proposition:**
-- Unified analysis interface for multiple energy modeling platforms (PyPSA, Plexos, Antares, BID3)
+- Unified analysis interface for any energy modeling platform, real market data, or custom data sources (e.g. PyPSA, Plexos, Entso-e TP, ...)
 - Consistent handling of scenarios and scenario comparisons
 - Integrated tools for model data and time series analysis
 - Modular design that allows seamless integration of study-specific code
@@ -21,33 +21,49 @@ Here is a list of all studies and examples currently part of the mescal-vanilla-
 
 ### [Study 01: Intro to MESCAL](studies/study_01_intro_to_mescal)
 
+The intro studies primarily uses a PyPSA example network to introduce the MESCAL modules and framework. The series is structured as follows and the series will continuously be updated. So stay tuned.
+
 #### Getting Started Series:
 - [mescal_101_study_manager_and_basic_fetching](studies/study_01_intro_to_mescal/notebooks/mescal_101_study_manager_and_basic_fetching.ipynb) - Getting started with scenarios and comparisons
-- [mescal_102_more_data_fetching](studies/study_01_intro_to_mescal/notebooks/mescal_102_more_data_fetching.ipynb) - Mastering the fetch method and data access patterns
+- [mescal_102_mastering_data_fetching](studies/study_01_intro_to_mescal/notebooks/mescal_102_mastering_data_fetching.ipynb) - Mastering the fetch method and data access patterns
 - [mescal_103_time_series_dashboard](studies/study_01_intro_to_mescal/notebooks/mescal_103_time_series_dashboard.ipynb) - Building interactive visualizations beyond simple line plots
 
 #### Intermediate Series:
 - mescal_201_custom_interpreters - Creating study-specific data interpreters and variables
-- mescal_202_model_timeseries_integration - Combining static model data with time series for richer analysis
-- mescal_203_dataset_collections - Linking, merging and managing multiple data sources
+- mescal_202_dataset_collections - Linking, merging and managing multiple data sources
+- mescal_203_model_timeseries_integration - Combining static model data with time series for richer analysis
+- mescal_204_scenario_attributes - Managing and utilizing scenario metadata effectively
 
 #### Advanced Series:
-- mescal_301_kpi_framework - Building a structured KPI system with proper unit handling
-- mescal_302_geospatial_visualization - Creating interactive Folium maps for scenario comparison
-- mescal_303_configuration_hierarchy - Mastering dataset and fetch-level configurations
+- mescal_301_kpi_framework_and_units - Building a structured KPI system with proper unit handling
+- mescal_302_kpi_collections_and_tables - Extracting pretty KPI tables 
+- mescal_303_geospatial_visualization - Creating interactive Folium maps for scenario comparison
+- mescal_304_country_plotter_util - Creating interactive Folium maps for scenario comparison
 
 #### Expert Series:
-- mescal_401_flag_index_system - Understanding relationships between model and time series data
+- mescal_401_configuration_hierarchy - Mastering dataset and fetch-level configurations
 - mescal_402_validation_framework - Ensuring data consistency across scenarios
 - mescal_403_dot_notation_api - Using Python's dot notation for elegant data access
+- mescal_404_pickle_database_integration - Intro to simple .pickle DB integration for faster fetching 
+
+#### Interface Builder Series:
+- mescal_501_flag_index_system - Understanding relationships between model and time series data
+- mescal_502_model_enrichment_patterns - Advanced techniques for property and membership enrichment
+- mescal_503_variable_aggregation_patterns - Advanced techniques for property and membership enrichment
+- mescal_504_platform_dataset - The PlatformDataset: A registry and container for data interpreters that handle different aspects of handling data from a platform
 
 #### Architecture & Best Practices:
-- mescal_501_multi_study_architecture - Organizing repositories with multiple studies
-- mescal_502_model_enrichment_patterns - Advanced techniques for property and membership enrichment
-- mescal_503_scenario_attributes - Managing and utilizing scenario metadata effectively
+- mescal_601_multi_study_architecture - Organizing repositories with multiple studies
+- mescal_602_color_themes - Managing different color themes across different studies
 
-### [study_02_plexos_example](studies/study_02_plexos_example)
-This study demonstrates how to use MESCAL with PLEXOS simulation outputs, showing the platform-agnostic nature of the framework. It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in study_01.
+#### More MESCAL:
+- mescal_xxx_segmented_colormap
+- mescal_xxx_granularity_analysis_and_conversion
+- mescal_xxx_multi_index_utils - xs_df, set_new_column, sort_multi_index, 
+- mescal_xxx_html_dashboards - Multiple HTML plots (e.g. plotly figures) in one share-able html file
+
+### [Study 02 Plexos Example](studies/study_02_plexos_example)
+This study demonstrates how to use MESCAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in Study 01.
 
 ---
 
@@ -59,7 +75,8 @@ Beyond providing examples, this repository serves as a template architecture for
 - Clear separation between shared (version-controlled) and private (local) code/data
 - Quick switching between studies, as many analysts need in their daily work
 - Reuse of modules across studies
-- Low entry barrier to get started, while enabling incremental development
+- Low entry barrier to get started, while enabling incremental and modular development
+- more about this in 
 
 ---
 
