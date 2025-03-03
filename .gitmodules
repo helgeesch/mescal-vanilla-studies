@@ -1,0 +1,6 @@
+[submodule "submodules/mescal"]
+	path = submodules/mescal
+	url = git@github.com:helgeesch/mescal.git
+[submodule "submodules/mescal-pypsa"]
+	path = submodules/mescal-pypsa
+	url = git@github.com:helgeesch/mescal-pypsa.git
