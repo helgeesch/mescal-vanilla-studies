@@ -44,9 +44,8 @@ Beyond providing examples, this repository serves as a template architecture for
 
 ### Prerequisites
 - Python ≥ 3.10
-- Git
-
-We recommend setting up a virtual environment for this repository, but this is optional.
+- Git 
+- It is recommend to set up a virtual environment for this repository, but this is, of course, optional.
 
 ### Step 1: Clone mescal-vanilla-studies
 In your console, navigate to the directory in which you want to clone this repo. Then perform the clone:
@@ -57,9 +56,7 @@ git clone https://github.com/helgeesch/mescal-vanilla-studies.git
 ### Step 2: Add submodules
 ```bash
 cd mescal-vanilla-studies
-git submodule add https://github.com/helgeesch/mescal.git submodules/mescal
-git submodule add https://github.com/helgeesch/mescal-pypsa.git submodules/mescal-pypsa
-git submodule update --init --recursive
+git submodule update --init
 ```
 The folder `submodules/` should now include the respective packages.
 
