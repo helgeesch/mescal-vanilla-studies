@@ -2,16 +2,22 @@
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
 # MESCAL vanilla studies
-
 ## Overview
 
-**MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations. This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies.
+**MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
+This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
 
-**Value proposition:**
+The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) as submodules. 
+In order to replicate the repo locally, please go down to [Getting Started](#getting-started-setting-up-the-repo-locally).
+
+**MESCAL value proposition:**
 - Unified analysis interface for any energy modeling platform, real market data, or custom data sources (e.g. PyPSA, Plexos, Entso-e TP, ...)
 - Consistent handling of scenarios and scenario comparisons
 - Integrated tools for model data and time series analysis
 - Modular design that allows seamless integration of study-specific code
+- Library of generic modules for visualizations, data manipulation and processing, and  
+
+The example studies below provide hands-on examples for each of the proposed values.
 
 ---
 
@@ -23,7 +29,8 @@ Here is a list of all studies and examples currently part of the mescal-vanilla-
 The intro study primarily uses a PyPSA example network to introduce the MESCAL modules and framework. Click on the title of the study to see the full overview.
 
 ### Study 02 Plexos Example ([link](studies/study_02_plexos_example))
-This study demonstrates how to use MESCAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in Study 01.
+This study demonstrates how to use MESCAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. 
+It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in Study 01.
 
 ---
 
