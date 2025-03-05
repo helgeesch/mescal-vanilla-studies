@@ -30,7 +30,7 @@ The intro study primarily uses a PyPSA example network to introduce the MESCAL m
 - mescal_503_variable_aggregation_patterns - Advanced techniques for property and membership enrichment
 - mescal_504_platform_dataset - The PlatformDataset: A registry and container for data interpreters that handle different aspects of handling data from a platform
 
-### Architecture & Best Practices:
+### Managing Multiple Studies Series:
 - mescal_601_multi_study_architecture - Organizing repositories with multiple studies
 - mescal_602_color_themes - Managing different color themes across different studies
 
