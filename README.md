@@ -1,14 +1,14 @@
 [![Python >=3.10](https://img.shields.io/badge/python-≥3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-# MESCAL vanilla studies
+# MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/0fd73109a9dd36611c3669987229e2b50ba6ec98/assets/logo_no_text_no_bg.svg?token=GHSAT0AAAAAAC7GW4IGVPDCPWWOYLEGARF2Z6IKVRQ" width="70" height="70" alt="logo">
 ## Overview
 
 **MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
 This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
 
 The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) as submodules. 
-In order to replicate the repo locally, please go down to [Getting Started](#getting-started-setting-up-the-repo-locally).
+In order to replicate the repo locally, please go down to [Getting Started](#getting-started-setting-up-the-repo-locally) and follow the steps.
 
 **MESCAL value proposition:**
 - Unified analysis interface for any energy modeling platform, real market data, or custom data sources (e.g. PyPSA, Plexos, Entso-e TP, ...)
