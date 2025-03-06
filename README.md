@@ -1,7 +1,7 @@
 [![Python >=3.10](https://img.shields.io/badge/python-≥3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-# MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/0fd73109a9dd36611c3669987229e2b50ba6ec98/assets/logo_no_text_no_bg.svg?token=GHSAT0AAAAAAC7GW4IGVPDCPWWOYLEGARF2Z6IKVRQ" width="70" height="70" alt="logo">
+# MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
 ## Overview
 
 **MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
