@@ -33,11 +33,10 @@ The intro study primarily uses a PyPSA example network to introduce the MESCAL m
 - mescal_602_color_themes - Managing different color themes across different studies
 
 ### Interface Builder Series:
-- mescal_701_platform_dataset - An abstract class to build an interface to a new platform
+- mescal_701_platform_dataset - An abstract container class for data interpreters to cover all aspects of handling data from a platform
 - mescal_702_flag_index_system - Understanding relationships between model and time series data
 - mescal_703_model_enrichment_patterns - Advanced techniques for property and membership enrichment
 - mescal_704_variable_aggregation_patterns - Advanced techniques for automatic variable aggregations
-- mescal_705_platform_dataset - The PlatformDataset: A registry and container for data interpreters that handle different aspects of handling data from a platform
 
 ### Advanced DataFrame Handling Series:
 - mescal_801_granularity_analysis_and_conversion - Handling time-series of different granularities
