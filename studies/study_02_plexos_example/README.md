@@ -1,3 +1,3 @@
-# study_03_plexos_example
+# Study 02: Plexos Example
 
 Stay tuned, coming soon...
