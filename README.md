@@ -4,20 +4,13 @@
 # MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
 ## Overview
 
-**MESCAL** (Modular Energy Scenario Comparison Analysis and Library) is a Python framework for post-processing and analyzing energy systems data, with a focus on scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
+**MESCAL** (Modular Energy Scenario Comparison Analysis Library) is a Python framework for post-processing and analyzing energy systems data from any platform, with a focus on multi-scenario processing, scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
+
 This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
 
 The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) as submodules. 
-In order to replicate the repo locally, please go down to [Getting Started](#getting-started-setting-up-the-repo-locally) and follow the steps.
 
-**MESCAL value proposition:**
-- Unified analysis interface for any energy modeling platform, real market data, or custom data sources (e.g. PyPSA, Plexos, Entso-e TP, ...)
-- Consistent handling of scenarios and scenario comparisons
-- Integrated tools for model data and time series analysis
-- Modular design that allows seamless integration of study-specific code
-- Library of generic modules for visualizations, data manipulation and processing, and  
-
-The example studies below provide hands-on examples for each of the proposed values.
+Visit the foundation package's README to find out more about the the [MESCAL value proposition](https://github.com/helgeesch/mescal) or dive into the hands-on example studies in this repo to see MESCAL in action.
 
 ---
 
