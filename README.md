@@ -54,12 +54,20 @@ git clone https://github.com/helgeesch/mescal-vanilla-studies.git
 ```
 
 ### Step 2: Add submodules
-
+Navigate to the mescal-vanilla-studies folder and then initialize all submodules.
 ```bash
 cd mescal-vanilla-studies
 git submodule update --init
 ```
 The folder `submodules/` should now include the respective packages.
+
+#### Step 2.1 (Optional) Use SSH instead of https for submodules
+The following step is entirely optional. Only use it in case you want to use SSH for the submodules.
+Per default, the .gitmodules file is set up to use https. In case you have SSH set up with github and want to use it for the submodules as well, the following command will make sure git will use the SSH-URLs instead of the https-URLs:
+```bash
+git config submodule.submodules/mescal.url git@github.com:helgeesch/mescal.git
+git config submodule.submodules/mescal-pypsa.url git@github.com:helgeesch/mescal-pypsa.git
+```
 
 ### Step 3: Configure submodules as source root
 #### PyCharm Configuration
