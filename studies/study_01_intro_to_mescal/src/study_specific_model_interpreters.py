@@ -3,9 +3,9 @@ import os
 import pandas as pd
 import geopandas as gpd
 
+from mescal.typevars import FlagType, DatasetConfigType
 from mescal_pypsa.network_interpreters.base import PyPSAInterpreter
 from mescal_pypsa.network_interpreters.model import PyPSAModelInterpreter
-from typevars import FlagType, DatasetConfigType
 
 if TYPE_CHECKING:
     from mescal_pypsa.pypsa_config import PyPSADatasetConfig
