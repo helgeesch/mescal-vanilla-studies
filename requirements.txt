@@ -6,3 +6,4 @@ shapely
 kaleido
 pypsa
 ipython
+jupyter
