@@ -1,4 +1,5 @@
 import os
+import glob
 import pypsa
 
 from mescal import StudyManager
@@ -6,29 +7,48 @@ from mescal_pypsa import PyPSADataset
 
 from studies.study_01_intro_to_mescal.src.study_specific_model_interpreters import ControlAreaModelInterpreter, ScigridDEBusModelInterpreter
 
-PyPSADataset.register_interpreter(ControlAreaModelInterpreter)
-PyPSADataset.register_interpreter(ScigridDEBusModelInterpreter)
+
+class ScigridDEDataset(PyPSADataset):
+    @classmethod
+    def _register_core_interpreters(cls):
+        cls.register_interpreter(ControlAreaModelInterpreter)
+        cls.register_interpreter(ScigridDEBusModelInterpreter)
+
+
+ScigridDEDataset._register_core_interpreters()
+
+
+def _get_name_from_path(file_path: str) -> str:
+    return os.path.basename(file_path).replace('.nc', '')
+
+
+def _get_attributes_from_name(model_name: str) -> dict[str, str | int]:
+    attributes = dict()
+    if '_' in model_name:
+        res_tech, scaling_factor = model_name.split('_')
+        attributes['res_tech'] = res_tech
+        attributes['scaling_factor'] = scaling_factor
+    return attributes
+
+
+def _get_dataset_from_nc_file_path(file_path: str) -> PyPSADataset:
+    name = _get_name_from_path(file_path)
+    attributes = _get_attributes_from_name(name)
+    n = pypsa.Network(file_path)
+    return ScigridDEDataset(n, name=name, attributes=attributes)
 
 
 def get_scigrid_de_study_manager() -> StudyManager:
     study_folder = 'studies/study_01_intro_to_mescal'
     networks_folder = os.path.join(study_folder, 'data/networks_scigrid_de')
-
-    n_base = pypsa.Network(os.path.join(networks_folder, 'base.nc'))
-    n_solar_150 = pypsa.Network(os.path.join(networks_folder, 'solar_150.nc'))
-    n_solar_200 = pypsa.Network(os.path.join(networks_folder, 'solar_200.nc'))
-    n_wind_150 = pypsa.Network(os.path.join(networks_folder, 'wind_150.nc'))
-    n_wind_200 = pypsa.Network(os.path.join(networks_folder, 'wind_200.nc'))
+    network_files = glob.glob(os.path.join(networks_folder, '*.nc'))
 
     study_manager = StudyManager.factory_from_scenarios(
         scenarios=[
-            PyPSADataset(n_base,        name='base'),
-            PyPSADataset(n_solar_150,   name='solar_150'),
-            PyPSADataset(n_solar_200,   name='solar_200'),
-            PyPSADataset(n_wind_150,    name='wind_150'),
-            PyPSADataset(n_wind_200,    name='wind_200'),
+            _get_dataset_from_nc_file_path(f)
+            for f in network_files
         ],
-        comparisons=[('solar_150', 'base'), ('solar_200', 'base'), ('wind_150', 'base'), ('wind_200', 'base')],
+        comparisons=[(_get_name_from_path(f), 'base') for f in network_files if not f.endswith('base.nc')],
         export_folder=os.path.join(study_folder, 'non_versioned/output'),
     )
     return study_manager
