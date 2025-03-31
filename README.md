@@ -8,7 +8,7 @@
 
 This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
 
-The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) as submodules. 
+The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) (to be released) as submodules. 
 
 Visit the foundation package's README to find out more about the the [MESCAL value proposition](https://github.com/helgeesch/mescal) or dive into the hands-on example studies in this repo to see MESCAL in action.
 
