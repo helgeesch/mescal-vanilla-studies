@@ -4,7 +4,7 @@ The intro study primarily uses a PyPSA example network to introduce the MESCAL m
 ### Getting Started Series:
 - [mescal_101_study_manager_and_basic_fetching](notebooks/mescal_101_study_manager_and_basic_fetching.ipynb) - Getting started with scenarios and comparisons
 - [mescal_102_mastering_data_fetching](notebooks/mescal_102_mastering_data_fetching.ipynb) - Mastering the fetch method and data access patterns
-- mescal_103_scenario_attributes - Managing and utilizing scenario metadata effectively
+- [mescal_103_scenario_attributes](notebooks/mescal_103_scenario_attributes.ipynb) - Managing and utilizing scenario metadata effectively
 
 ### KPI Framework Series:
 - mescal_201_kpi_framework_and_units - Building a structured KPI system with proper unit handling
