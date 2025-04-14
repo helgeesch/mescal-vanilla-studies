@@ -7,3 +7,12 @@ kaleido
 pypsa
 ipython
 jupyter
+pyarrow
+matplotlib
+networkx
+colorlog
+folium
+Pint
+branca
+tqdm
+selenium
