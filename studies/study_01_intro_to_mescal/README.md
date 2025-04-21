@@ -12,10 +12,13 @@ The intro study primarily uses a PyPSA example network to introduce the MESCAL m
 
 ### Visualization Series
 - [mescal_301_time_series_dashboard](notebooks/mescal_301_time_series_dashboard.ipynb) - The best way to visualize, compare and understand time-series
-- mescal_302_segmented_colormap - A useful colormap to merge multiple linear segments into a single colormap
-- mescal_303_geospatial_visualization - Creating interactive Folium maps for scenario comparison
-- mescal_304_country_plotter_util - GeoJSON library of country shapes
-- mescal_305_html_dashboards - Multiple HTML plots (e.g. plotly figures) in one share-able html file
+- [mescal_302_segmented_colormap](notebooks/mescal_302_segmented_colormap.ipynb) - A useful colormap to merge multiple linear segments into a single colormap
+- [mescal_303_area_kpi_map](notebooks/mescal_303_area_kpi_map.ipynb) - Creating interactive Folium maps with area KPIs for scenarios and comparisons
+- mescal_304_line_kpi_map - Creating interactive Folium maps with line KPIs for scenarios and comparisons
+- mescal_305_area_border_kpi_map - Creating interactive Folium maps with area-border KPIs for scenarios and comparisons
+- mescal_306_icon_kpi_map - Creating interactive Folium maps with KPIs projected as icons for scenarios and comparisons
+- [mescal_307_country_plotter_util](notebooks/mescal_307_country_plotter_util.ipynb) - GeoJSON library of country shapes
+- [mescal_308_html_dashboards](notebooks/mescal_308_html_dashboards.ipynb) - Multiple HTML plots (e.g. plotly figures) in one share-able html file
 
 ### Advanced Dataset Handling Series:
 - mescal_401_dataset_collections - Linking, merging and managing multiple data sources
