@@ -8,14 +8,17 @@ def configure_clean_output_for_jupyter_notebook():
     import pandas as pd
     import numpy as np
 
-    # Configure logging to show only errors
     logging.basicConfig(level=logging.ERROR)
 
     warnings.filterwarnings("ignore", category=DeprecationWarning)
     warnings.filterwarnings("ignore", category=FutureWarning)
     warnings.filterwarnings("ignore", category=UserWarning)
     warnings.filterwarnings("ignore", category=RuntimeWarning)
-
+    warnings.filterwarnings(
+        "ignore",
+        message="Jupyter is migrating its paths to use standard platformdirs",
+        category=DeprecationWarning
+    )
     warnings.filterwarnings("ignore", module="matplotlib")
     warnings.filterwarnings("ignore", module="plotly")
     warnings.filterwarnings("ignore", module="ipykernel")
