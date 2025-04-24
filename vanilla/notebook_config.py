@@ -49,7 +49,6 @@ def ensure_repo_root_is_in_path():
     from pathlib import Path
 
     def find_repo_root():
-        """Find repository root and set working directory."""
         current = Path(os.getcwd()).absolute()
         while current != current.parent:
             if (current / '.git').exists() or (current / 'submodules').exists():
