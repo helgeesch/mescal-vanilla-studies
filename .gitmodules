@@ -4,3 +4,6 @@
 [submodule "submodules/mescal-pypsa"]
 	path = submodules/mescal-pypsa
 	url = https://github.com/helgeesch/mescal-pypsa.git
+[submodule "submodules/captain-arro"]
+	path = submodules/captain-arro
+	url = https://github.com/helgeesch/captain-arro.git
