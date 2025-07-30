@@ -25,6 +25,7 @@ def configure_clean_output_for_jupyter_notebook():
     warnings.filterwarnings("ignore", module="ipywidgets")
     warnings.filterwarnings("ignore", module="pandas")
     warnings.filterwarnings("ignore", module="geopandas")
+    warnings.filterwarnings("ignore", module="pint")
 
     pd.set_option('display.max_columns', 6)
     pd.set_option('display.width', 1000)
