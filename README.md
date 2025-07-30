@@ -51,61 +51,38 @@ Beyond providing examples, this repository serves as a template architecture for
 In your console, navigate to the directory in which you want to clone this repo. Then perform the clone:
 ```bash
 git clone https://github.com/helgeesch/mescal-vanilla-studies.git
+cd mescal-vanilla-studies
 ```
 
-### Step 2: Add submodules
-Navigate to the mescal-vanilla-studies folder and then initialize all submodules.
+### Step 2: Install sister packages or add them as submodules
+### Option A: Install submodules from Git with pip (easy for consumers)
 ```bash
-cd mescal-vanilla-studies
+pip install git+https://github.com/helgeesch/mescal.git
+pip install git+https://github.com/helgeesch/mescal-pypsa.git
+pip install git+https://github.com/helgeesch/captain-arro.git
+```
+
+### Option B: Local dev with submodules (for active development)
+#### B.1: Add submodules under your repo:
+Make sure your console is in the mescal-vanilla-studies folder and then initialize all submodules with
+```bash
 git submodule update --init
 ```
 The folder `submodules/` should now include the respective packages.
 
-#### Step 2.1 (Optional) Use SSH instead of https for submodules
-The following step is entirely optional. Only use it in case you want to use SSH for the submodules.
-Per default, the .gitmodules file is set up to use https. In case you have SSH set up with github and want to use it for the submodules as well, the following command will make sure git will use the SSH-URLs instead of the https-URLs:
+#### B.2: Install in editable mode so that any code changes “just work”:
 ```bash
-git config submodule.submodules/mescal.url git@github.com:helgeesch/mescal.git
-git config submodule.submodules/mescal-pypsa.url git@github.com:helgeesch/mescal-pypsa.git
+pip install -e ./submodules/mescal
+pip install -e ./submodules/mescal-pypsa
+pip install -e ./submodules/captain-arro
 ```
 
-### Step 3: Configure submodules as source root
-#### PyCharm Configuration
-If you're using PyCharm, ensure that the submodule directories are properly recognized as part of the source code by setting them as "Sources Root":
-
-1. In PyCharm's Project Explorer, locate the submodule directories:
-   - `submodules/mescal`
-   - `submodules/mescal-pypsa`
-2. Right-click on each of the directories above.
-3. Select Mark Directory as -> Sources Root.
-
-
-#### VSCode Configuration
-In Visual Studio Code, you can add the submodules to the python.analysis.extraPaths setting:
-1. Open your project folder.
-2. Create (or modify) .vscode/settings.json:
-    ```json
-    {
-        "python.analysis.extraPaths": [
-          "submodules/mescal",
-          "submodules/mescal-pypsa"
-        ]
-    }
-    ```
-
-#### Jupyter Notebook Configuration
-If you work with Jupyter, extend the sys.path directly in your notebook:
-```python
-import sys
-sys.path.append("submodules/mescal")
-sys.path.append("submodules/mescal-pypsa")
-```
+#### B.3 (optional): IDE tip
+If you want full autocomplete and go-to-definition in PyCharm/VS Code, mark submodules/mescal (and any other submodule) as a Sources Root in your IDE. This is purely for dev comfort and won’t affect other users.
 
 ### Step 4: Install requirements
 ```bash
 pip install -r requirements.txt
-pip install -r submodules/mescal/requirements.txt
-pip install -r submodules/mescal-pypsa/requirements.txt
 ```
 
 ---
