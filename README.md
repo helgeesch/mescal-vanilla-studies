@@ -3,7 +3,7 @@
 
 # MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
 
-[Try out in Google Colab](https://colab.research.google.com/github/helgeesch/mescal-vanilla-studies/blob/main/studies/study_01_intro_to_mescal/mescal_100_get_started_in_google_colab.ipynb)
+[Try out in Google Colab](https://colab.research.google.com/github/helgeesch/mescal-vanilla-studies/blob/main/studies/study_01_intro_to_mescal/notebooks/mescal_101_study_manager_and_basic_fetching.ipynb)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Here is a list of all studies and examples currently part of the mescal-vanilla-
 ### Study 01: Intro to MESCAL ([link](studies/study_01_intro_to_mescal))
 The intro study primarily uses a PyPSA example network to introduce the MESCAL modules and framework. Click on the title of the study to see the full overview.
 
-### Study 02 Plexos Example ([link](studies/study_02_plexos_example))
+### Study 02: Plexos Example ([link](studies/study_02_plexos_example))
 This study demonstrates how to use MESCAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. 
 It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in Study 01.
 

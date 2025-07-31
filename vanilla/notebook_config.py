@@ -7,6 +7,7 @@ def configure_clean_output_for_jupyter_notebook():
     import warnings
     import pandas as pd
     import numpy as np
+    import matplotlib
 
     logging.basicConfig(level=logging.ERROR)
 
@@ -32,6 +33,10 @@ def configure_clean_output_for_jupyter_notebook():
     pd.set_option('display.precision', 2)
 
     np.seterr(all='ignore')
+    matplotlib.set_loglevel("error")
+
+    for logger_name in logging.root.manager.loggerDict:
+        logging.getLogger(logger_name).setLevel(logging.ERROR)
 
 
 def ensure_repo_root_is_in_path():
