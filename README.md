@@ -3,8 +3,6 @@
 
 # MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
 
-[Try out in Google Colab](https://colab.research.google.com/github/helgeesch/mescal-vanilla-studies/blob/main/studies/study_01_intro_to_mescal/notebooks/mescal_101_study_manager_and_basic_fetching.ipynb)
-
 ## Overview
 
 **MESCAL** (Modular Energy Scenario Comparison Analysis Library) is a Python framework for post-processing and analyzing energy systems data from any platform, with a focus on multi-scenario processing, scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
