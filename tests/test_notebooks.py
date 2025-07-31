@@ -35,6 +35,7 @@ def test_notebook_runs_without_errors(notebook_path):
         nb,
         timeout=600,
         kernel_name="python3",
+        **({"async_": False} if "async_" in NotebookClient.__init__.__code__.co_varnames else {}),
         resources={"metadata": {"path": notebook_path.parent}}
     )
 
