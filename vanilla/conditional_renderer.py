@@ -61,10 +61,10 @@ class ConditionalRenderer:
     def show_plotly(self, fig: 'go.Figure'):
         if self.preparing_for_github:
             export_path = self.tmp_dir / "plot.png"
-            fig.update_layout(height=self.height)
             fig.write_image(str(export_path), width=self.width, height=self.height)
             display(Image(filename=str(export_path)))
         else:
+            fig.update_layout(height=self.height)
             fig.show()
 
     def show_folium(self, m: 'folium.Map'):
