@@ -60,7 +60,6 @@ cd mescal-vanilla-studies
 ```bash
 pip install git+https://github.com/helgeesch/mescal.git
 pip install git+https://github.com/helgeesch/mescal-pypsa.git
-pip install git+https://github.com/helgeesch/captain-arro.git
 ```
 
 ### Option B: Local dev with submodules (for active development)
@@ -75,7 +74,6 @@ The folder `submodules/` should now include the respective packages.
 ```bash
 pip install -e ./submodules/mescal
 pip install -e ./submodules/mescal-pypsa
-pip install -e ./submodules/captain-arro
 ```
 
 #### B.3 (optional): IDE tip
