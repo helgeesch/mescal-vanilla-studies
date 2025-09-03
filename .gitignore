@@ -1,7 +1,7 @@
 non_versioned/
 _tmp/
 *.local/
-*.local
+*.local*
 .claude/
 .idea/
 .DS_Store
