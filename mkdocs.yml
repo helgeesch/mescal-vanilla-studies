@@ -1,5 +1,5 @@
-site_name: 'mescal Package Documentation'
-# site_url: 'https://github.com/helgeesch/mescal-vanilla-studies/'
+site_name: 'MESCAL Suite Documentation'
+site_url: 'https://docs.mesqual.io/'
 repo_url: 'https://github.com/helgeesch/mescal-vanilla-studies/'
 
 
@@ -17,6 +17,8 @@ markdown_extensions:
   - toc:
       permalink: true
       toc_depth: 5
+  - pymdownx.highlight
+  - pymdownx.superfences
 
 plugins:
   - search
@@ -34,8 +36,13 @@ plugins:
             show_symbol_type_heading: true
             show_category_heading: false
             show_root_toc_entry: false
+            signature_crossrefs: true
+            show_signature_annotations: true
             show_signature_type_parameters: true
             members_order: source
+            modernize_annotations: true
+            separate_signature: true
+            merge_init_into_class: false
   - monorepo
   - mkdocs-jupyter:
       include_source: True
