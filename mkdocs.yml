@@ -1,0 +1,65 @@
+site_name: 'MESCAL Suite Documentation'
+site_url: 'https://docs.mesqual.io/'
+repo_url: 'https://github.com/helgeesch/mescal-vanilla-studies/'
+
+
+theme:
+  name: material
+  palette:
+    primary: 'teal'
+    accent: 'amber'
+  features:
+    - navigation.tabs
+    - content.tabs.link
+    - navigation.sections
+
+markdown_extensions:
+  - toc:
+      permalink: true
+      toc_depth: 5
+  - pymdownx.highlight
+  - pymdownx.superfences
+
+plugins:
+  - search
+  - section-index
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [submodules]
+          options:
+            heading_level: 2
+            show_root_heading: true
+            show_root_full_path: false
+            show_object_full_path: false
+            show_root_members_full_path: false
+            show_symbol_type_heading: true
+            show_category_heading: false
+            show_root_toc_entry: false
+            signature_crossrefs: true
+            show_signature_annotations: true
+            show_signature_type_parameters: true
+            members_order: source
+            modernize_annotations: true
+            separate_signature: true
+            merge_init_into_class: false
+  - monorepo
+  - mkdocs-jupyter:
+      include_source: True
+      allow_errors: False
+      kernel_name: python3
+      ignore:
+        - "*.py"
+
+#exclude_docs: |
+
+nav:
+  - Home: index.md
+  - MESCAL API Reference: '!include submodules/mescal/mkdocs.yml'
+  #  - MESCAL PYPSA: '!include submodules/mescal-pypsa/mkdocs.yml'
+  #  - MESCAL AGENTS: '!include submodules/mescal-agents/mkdocs.yml'
+  #  - MESCAL MCP: '!include submodules/mescal-mcp/mkdocs.yml'
+  - Studies & Examples:
+      - Intro to MESCAL: '!include studies/mkdocs_study_01.yml'
+  #      - Plexos Example: '!include studies/mkdocs_study_02.yml'
+  #      - PyPSA EUR Example: '!include studies/mkdocs_study_03.yml'
