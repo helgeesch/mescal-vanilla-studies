@@ -7,8 +7,8 @@ from IPython.display import Image, display
 if TYPE_CHECKING:
     import plotly.graph_objects as go
     import folium
-    from mescal.visualizations.html_dashboard import HTMLDashboard
-    from mescal.visualizations.html_table import HTMLTable
+    from mesqual.visualizations.html_dashboard import HTMLDashboard
+    from mesqual.visualizations.html_table import HTMLTable
 
 
 class ConditionalRenderer:

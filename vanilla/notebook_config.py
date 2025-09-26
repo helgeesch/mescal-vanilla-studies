@@ -44,7 +44,7 @@ def ensure_repo_root_is_in_path():
     Locate repository root, set working directory, and update Python path.
 
     This function is designed to be used at the top of notebooks to standardize
-    path management across the MESCAL project. It:
+    path management across the MESQUAL project. It:
 
     1. Finds the repository root by searching upward for .git or submodules directory
     2. Changes the working directory to the repository root
@@ -73,7 +73,7 @@ def ensure_repo_root_is_in_path():
 
 
 def add_submodules_to_path():
-    """Add all required MESCAL submodules to the Python path."""
+    """Add all required MESQUAL submodules to the Python path."""
     import os
     import sys
     from pathlib import Path
@@ -88,12 +88,12 @@ def add_submodules_to_path():
             f"Current working directory: {current_dir}\n\n"
             f"Possible issues:\n"
             f"1. Git submodules not initialized. Run: git submodule update --init\n"
-            f"2. Working directory incorrect. Make sure the working directory is set to the mescal-vanilla-studies folder"
+            f"2. Working directory incorrect. Make sure the working directory is set to the mesqual-vanilla-studies folder"
         )
 
     submodule_paths = [
-        "mescal",
-        "mescal-pypsa",
+        "mesqual",
+        "mesqual-pypsa",
         # Add future submodules here
     ]
 
@@ -116,5 +116,5 @@ def add_submodules_to_path():
             f"Current working directory: {current_dir}\n\n"
             f"Possible issues:\n"
             f"1. Git submodules not initialized. Run: git submodule update --init\n"
-            f"2. Working directory incorrect. Make sure the working directory is set to the mescal-vanilla-studies folder"
+            f"2. Working directory incorrect. Make sure the working directory is set to the mesqual-vanilla-studies folder"
         )

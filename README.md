@@ -1,29 +1,29 @@
 [![Python >=3.10](https://img.shields.io/badge/python-≥3.10-blue.svg)](https://www.python.org/downloads/release/python-3100/)
 [![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)
 
-# MESCAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mescal/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
+# MESQUAL vanilla studies <img src="https://raw.githubusercontent.com/helgeesch/mesqual/refs/heads/main/assets/logo_no_text_no_bg.svg" width="70" height="70" alt="logo">
 
 ## Overview
 
-**MESCAL** (Modular Energy Scenario Comparison Analysis Library) is a Python framework for post-processing and analyzing energy systems data from any platform, with a focus on multi-scenario processing, scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
+**MESQUAL** (Modular Energy Scenario Comparison Analysis Library) is a Python framework for post-processing and analyzing energy systems data from any platform, with a focus on multi-scenario processing, scenario comparison, KPI calculation, and plotly / folium (map) visualizations.  
 
-This vanilla studies repository demonstrates MESCAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
+This vanilla studies repository demonstrates MESQUAL's capabilities through practical examples and serves as a template architecture for organizing energy modeling studies. 
 
-The repo integrates the foundation package [mescal](https://github.com/helgeesch/mescal), and the interface packages [mescal-pypsa](https://github.com/helgeesch/mescal-pypsa), [mescal-plexos](https://github.com/helgeesch/mescal-plexos) (to be released) as submodules. 
+The repo integrates the foundation package [mesqual](https://github.com/helgeesch/mesqual), and the interface packages [mesqual-pypsa](https://github.com/helgeesch/mesqual-pypsa), [mesqual-plexos](https://github.com/helgeesch/mesqual-plexos) (to be released) as submodules. 
 
-Visit the foundation package's README to find out more about the the [MESCAL value proposition](https://github.com/helgeesch/mescal) or dive into the hands-on example studies in this repo to see MESCAL in action.
+Visit the foundation package's README to find out more about the the [MESQUAL value proposition](https://github.com/helgeesch/mesqual) or dive into the hands-on example studies in this repo to see MESQUAL in action.
 
 ---
 
 ## Example Studies
 
-Here is a list of all studies and examples currently part of the mescal-vanilla-studies repo.
+Here is a list of all studies and examples currently part of the mesqual-vanilla-studies repo.
 
-### Study 01: Intro to MESCAL ([link](studies/study_01_intro_to_mescal))
-The intro study primarily uses a PyPSA example network to introduce the MESCAL modules and framework. Click on the title of the study to see the full overview.
+### Study 01: Intro to MESQUAL ([link](studies/study_01_intro_to_mesqual))
+The intro study primarily uses a PyPSA example network to introduce the MESQUAL modules and framework. Click on the title of the study to see the full overview.
 
 ### Study 02: Plexos Example ([link](studies/study_02_plexos_example))
-This study demonstrates how to use MESCAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. 
+This study demonstrates how to use MESQUAL with Plexos simulation outputs, showing the platform-agnostic nature of the framework. 
 It includes examples of loading PLEXOS data, performing common analyses, and visualizing results using the same patterns established in Study 01.
 
 ---
@@ -48,23 +48,23 @@ Beyond providing examples, this repository serves as a template architecture for
 - Git 
 - It is recommend to set up a virtual environment for this repository, but this is, of course, optional.
 
-### Step 1: Clone mescal-vanilla-studies
+### Step 1: Clone mesqual-vanilla-studies
 In your console, navigate to the directory in which you want to clone this repo. Then perform the clone:
 ```bash
-git clone https://github.com/helgeesch/mescal-vanilla-studies.git
-cd mescal-vanilla-studies
+git clone https://github.com/helgeesch/mesqual-vanilla-studies.git
+cd mesqual-vanilla-studies
 ```
 
 ### Step 2: Install sister packages or add them as submodules
 ### Option A: Install submodules from Git with pip (easy for consumers)
 ```bash
-pip install git+https://github.com/helgeesch/mescal.git
-pip install git+https://github.com/helgeesch/mescal-pypsa.git
+pip install git+https://github.com/helgeesch/mesqual.git
+pip install git+https://github.com/helgeesch/mesqual-pypsa.git
 ```
 
 ### Option B: Local dev with submodules (for active development)
 #### B.1: Add submodules under your repo:
-Make sure your console is in the mescal-vanilla-studies folder and then initialize all submodules with
+Make sure your console is in the mesqual-vanilla-studies folder and then initialize all submodules with
 ```bash
 git submodule update --init
 ```
@@ -72,12 +72,12 @@ The folder `submodules/` should now include the respective packages.
 
 #### B.2: Install in editable mode so that any code changes “just work”:
 ```bash
-pip install -e ./submodules/mescal
-pip install -e ./submodules/mescal-pypsa
+pip install -e ./submodules/mesqual
+pip install -e ./submodules/mesqual-pypsa
 ```
 
 #### B.3 (optional): IDE tip
-If you want full autocomplete and go-to-definition in PyCharm/VS Code, mark submodules/mescal (and any other submodule) as a Sources Root in your IDE. This is purely for dev comfort and won’t affect other users.
+If you want full autocomplete and go-to-definition in PyCharm/VS Code, mark submodules/mesqual (and any other submodule) as a Sources Root in your IDE. This is purely for dev comfort and won’t affect other users.
 
 ### Step 4: Install requirements
 ```bash
@@ -120,6 +120,6 @@ Contributions to improve examples or add new ones are welcome! Please feel free 
 
 ## Contact
 
-For questions or feedback about MESCAL or these example studies, don't hesitate to get in touch!
+For questions or feedback about MESQUAL or these example studies, don't hesitate to get in touch!
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/helge-e-8201041a7/)

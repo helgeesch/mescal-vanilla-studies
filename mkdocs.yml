@@ -1,6 +1,6 @@
-site_name: 'MESCAL Suite Documentation'
+site_name: 'MESQUAL Suite Documentation'
 site_url: 'https://docs.mesqual.io/'
-repo_url: 'https://github.com/helgeesch/mescal-vanilla-studies/'
+repo_url: 'https://github.com/helgeesch/mesqual-vanilla-studies/'
 
 
 theme:
@@ -55,11 +55,11 @@ plugins:
 
 nav:
   - Home: index.md
-  - MESCAL API Reference: '!include submodules/mescal/mkdocs.yml'
-  #  - MESCAL PYPSA: '!include submodules/mescal-pypsa/mkdocs.yml'
-  #  - MESCAL AGENTS: '!include submodules/mescal-agents/mkdocs.yml'
-  #  - MESCAL MCP: '!include submodules/mescal-mcp/mkdocs.yml'
+  - MESQUAL API Reference: '!include submodules/mesqual/mkdocs.yml'
+  #  - MESQUAL PYPSA: '!include submodules/mesqual-pypsa/mkdocs.yml'
+  #  - MESQUAL AGENTS: '!include submodules/mesqual-agents/mkdocs.yml'
+  #  - MESQUAL MCP: '!include submodules/mesqual-mcp/mkdocs.yml'
   - Studies & Examples:
-      - Intro to MESCAL: '!include studies/mkdocs_study_01.yml'
+      - Intro to MESQUAL: '!include studies/mkdocs_study_01.yml'
   #      - Plexos Example: '!include studies/mkdocs_study_02.yml'
   #      - PyPSA EUR Example: '!include studies/mkdocs_study_03.yml'
