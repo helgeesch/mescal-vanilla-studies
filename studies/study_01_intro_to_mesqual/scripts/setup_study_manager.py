@@ -2,11 +2,11 @@ import os
 import glob
 import pypsa
 
-from mescal import StudyManager
-from mescal_pypsa import PyPSADataset
+from mesqual import StudyManager
+from mesqual_pypsa import PyPSADataset
 
-from studies.study_01_intro_to_mescal.src.study_specific_model_interpreters import ControlAreaModelInterpreter, ScigridDEBusModelInterpreter
-from studies.study_01_intro_to_mescal.src.study_specific_variable_interpreters import ControlAreaVolWeightedPrice
+from studies.study_01_intro_to_mesqual.src.study_specific_model_interpreters import ControlAreaModelInterpreter, ScigridDEBusModelInterpreter
+from studies.study_01_intro_to_mesqual.src.study_specific_variable_interpreters import ControlAreaVolWeightedPrice
 
 
 class ScigridDEDataset(PyPSADataset):
@@ -41,7 +41,7 @@ def _get_dataset_from_nc_file_path(file_path: str) -> PyPSADataset:
 
 
 def get_scigrid_de_study_manager() -> StudyManager:
-    study_folder = 'studies/study_01_intro_to_mescal'
+    study_folder = 'studies/study_01_intro_to_mesqual'
     networks_folder = os.path.join(study_folder, 'data/networks_scigrid_de')
     network_files = sorted(glob.glob(os.path.join(networks_folder, '*.nc')))
 

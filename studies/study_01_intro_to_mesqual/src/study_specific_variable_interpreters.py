@@ -1,9 +1,9 @@
 import pandas as pd
 
-from mescal.typevars import FlagType, DatasetConfigType
-from mescal.utils.pandas_utils.pend_props import prepend_model_prop_levels
+from mesqual.typevars import FlagType, DatasetConfigType
+from mesqual.utils.pandas_utils.pend_props import prepend_model_prop_levels
 
-from mescal_pypsa.network_interpreters.base import PyPSAInterpreter
+from mesqual_pypsa.network_interpreters.base import PyPSAInterpreter
 
 
 class ControlAreaVolWeightedPrice(PyPSAInterpreter):
@@ -38,11 +38,11 @@ class ControlAreaVolWeightedPrice(PyPSAInterpreter):
 
 if __name__ == '__main__':
     from pypsa import Network
-    from studies.study_01_intro_to_mescal.scripts.setup_study_manager import ScigridDEDataset
+    from studies.study_01_intro_to_mesqual.scripts.setup_study_manager import ScigridDEDataset
 
     ScigridDEDataset.register_interpreter(ControlAreaVolWeightedPrice)
 
-    n = Network('studies/study_01_intro_to_mescal/data/networks_scigrid_de/base.nc')
+    n = Network('studies/study_01_intro_to_mesqual/data/networks_scigrid_de/base.nc')
     ds = ScigridDEDataset(n)
     vol_weighted_marginal_price = ds.fetch('control_areas_t.vol_weighted_marginal_price')
     print(vol_weighted_marginal_price)

@@ -3,16 +3,16 @@ import os
 import pandas as pd
 import geopandas as gpd
 
-from mescal.typevars import FlagType, DatasetConfigType
-from mescal_pypsa.network_interpreters.base import PyPSAInterpreter
-from mescal_pypsa.network_interpreters.model import PyPSAModelInterpreter
+from mesqual.typevars import FlagType, DatasetConfigType
+from mesqual_pypsa.network_interpreters.base import PyPSAInterpreter
+from mesqual_pypsa.network_interpreters.model import PyPSAModelInterpreter
 
 if TYPE_CHECKING:
-    from mescal_pypsa.pypsa_config import PyPSADatasetConfig
+    from mesqual_pypsa.pypsa_config import PyPSADatasetConfig
     from shapely import Point
 
 
-_PATH_TO_GEOJSON = os.path.join('studies/study_01_intro_to_mescal/data/DE_control_areas.geojson')
+_PATH_TO_GEOJSON = os.path.join('studies/study_01_intro_to_mesqual/data/DE_control_areas.geojson')
 
 
 def _get_control_area_gdf() -> gpd.GeoDataFrame:

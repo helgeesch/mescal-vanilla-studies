@@ -2,7 +2,7 @@ import pypsa
 
 from vanilla.study_path_manager import PathManager
 
-pm = PathManager('studies/study_01_intro_to_mescal')
+pm = PathManager('studies/study_01_intro_to_mesqual')
 
 pm.ensure_dir(pm.data('networks_scigrid_de'))
 
